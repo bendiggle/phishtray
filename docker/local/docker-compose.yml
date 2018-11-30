@@ -23,7 +23,12 @@ services:
     - "9000:9000"
     - "9022:22"
     environment:
-    - DATABASE_HOST=db
+    - DB_ENGINE=django.db.backends.mysql
+    - DB_HOST=db
+    - DB_PORT=3306
+    - DB_NAME=phishtray
+    - DB_USER=root
+    - DB_PASSWORD=admin
     volumes:
     - ../../.:/usr/src/app
     networks:
