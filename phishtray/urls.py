@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.http import HttpResponseRedirect
 
+from frontend.views import index
+
 admin.site.site_header = 'Phishtray Administration'
 
 urlpatterns = [
-    url(r'^$', lambda r: HttpResponseRedirect('api/v1/')),
+    url(r'^$', index),
     url(r'^api/v1/', include('phishtray.api_urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
