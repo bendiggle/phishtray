@@ -1,9 +1,11 @@
 #!/bin/sh
-ls
-echo "----------"
+echo "---- Preparing FE ------"
 cd frontend
-pwd
-echo "---- INSTALL ------"
-npm install
-echo "---- BUILD ------"
-npm run build
+yarn install
+yarn build
+
+echo "---- Updating static files ------"
+python manage.py collectstatic --noinput
+
+echo "---- Migrate ------"
+
