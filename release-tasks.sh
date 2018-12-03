@@ -6,8 +6,8 @@ echo "---- Preparing FE ------"
 #cp frontend/yarn.lock ./
 
 echo "---- Updating static files ------"
-cd ..
-python manage.py collectstatic --noinput
+#cd ..
+#python manage.py collectstatic --noinput
 
 echo "---- Migrate ------"
 python manage.py migrate
