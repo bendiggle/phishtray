@@ -26,7 +26,7 @@
   },
   "scripts": {
     "heroku-prebuild": "cp frontend/yarn.lock ./",
-    "heroku-postbuild": "react-scripts build"
+    "heroku-postbuild": "cd frontend && yarn build"
   },
   "engines": {
     "yarn": "1.12.3"
