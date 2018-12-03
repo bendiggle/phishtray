@@ -1,2 +1,2 @@
 release: ./release-tasks.sh
-web: gunicorn phishtray.wsgi --log-file -
+web: python ./manage.py collectstatic --noinput; gunicorn phishtray.wsgi --log-file -
