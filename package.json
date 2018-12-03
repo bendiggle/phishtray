@@ -1,0 +1,8 @@
+{
+  "name": "phishtray",
+  "description": "Wrapper for frontend to allow Heroku builds.",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.12.0"
+  }
+}
