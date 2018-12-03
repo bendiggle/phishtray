@@ -22,10 +22,13 @@
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
-    "reselect": "^3.0.1",
-    "yarn": "^1.12.3"
+    "reselect": "^3.0.1"
+  },
+  "scripts": {
+    "heroku-prebuild": "cp frontend/yarn.lock ./",
+    "heroku-postbuild": "react-scripts build"
   },
   "engines": {
-    "node": "10.12.0"
+    "yarn": "1.12.3"
   }
 }
