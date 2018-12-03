@@ -29,8 +29,3 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
 ]
-
-# Staticfiles through Heroku
-urlpatterns += [
-    url(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT})
-]
