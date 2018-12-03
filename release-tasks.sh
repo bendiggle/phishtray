@@ -1,13 +1,12 @@
 #!/bin/sh
 echo "---- Preparing FE ------"
-#cd frontend
+cd frontend
 #yarn install
-#yarn build
-#cp frontend/yarn.lock ./
+yarn build
 
 echo "---- Updating static files ------"
-#cd ..
-#python manage.py collectstatic --noinput
+cd ..
+python manage.py collectstatic --noinput
 
-echo "---- Migrate ------"
+echo "---- Apply Migrations ------"
 python manage.py migrate
