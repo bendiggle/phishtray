@@ -1,5 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/sh
+ls
+echo "----------"
 cd frontend
-npm i yarn
-yarn install
-yarn build
+pwd
+echo "---- INSTALL ------"
+npm install
+echo "---- BUILD ------"
+npm run build
