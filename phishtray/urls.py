@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
+from django.template.context_processors import static
 from django.views.generic import TemplateView
+
+from phishtray import settings
 
 admin.site.site_header = 'Phishtray Administration'
 
@@ -25,4 +28,9 @@ urlpatterns = [
     url(r'^api/v1/', include('phishtray.api_urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
+]
+
+# Staticfiles through Heroku
+urlpatterns += [
+    url(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT})
 ]
